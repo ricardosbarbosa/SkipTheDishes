@@ -5,7 +5,10 @@ import './index.css';
 import App from './App';
 // disable ServiceWorker
 // import registerServiceWorker from './registerServiceWorker';
+import configureStore from './store/configureStore'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = configureStore()
+console.log(store)
+ReactDOM.render(<App store={store}/>, document.getElementById('root'));
 // disable ServiceWorker
 // registerServiceWorker();

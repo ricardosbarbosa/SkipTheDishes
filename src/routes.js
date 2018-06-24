@@ -7,6 +7,32 @@ function Loading() {
   return <div>Loading...</div>;
 }
 
+// skip the dishes
+const RestaurantsOverview = Loadable({
+  loader: () => import('./views/Restaurants/Overview'),
+  loading: Loading,
+});
+
+const CouriersOverview = Loadable({
+  loader: () => import('./views/Couriers/Overview'),
+  loading: Loading,
+});
+
+const SuppliersOverview = Loadable({
+  loader: () => import('./views/Suppliers/Overview'),
+  loading: Loading,
+});
+
+const Shopping = Loadable({
+  loader: () => import('./views/Restaurants/Shopping'),
+  loading: Loading,
+});
+
+const ShoppingCart = Loadable({
+  loader: () => import('./views/Restaurants/Shopping/Cart'),
+  loading: Loading,
+});
+
 const Breadcrumbs = Loadable({
   loader: () => import('./views/Base/Breadcrumbs'),
   loading: Loading,
@@ -227,6 +253,13 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+
+  // skip the dishes
+  { path: '/restaurants/overview', exact: true, name: 'Overview', component: RestaurantsOverview },
+  { path: '/restaurants/shopping', exact: true, name: 'Shopping', component: Shopping },
+  { path: '/restaurants/shopping/cart', exact: true, name: 'Shoppin Cart', component: ShoppingCart },
+  { path: '/couriers/overview', exact: true, name: 'Overview', component: CouriersOverview },
+  { path: '/suppliers/overview', exact: true, name: 'Overview', component: SuppliersOverview },
 ];
 
 export default routes;
