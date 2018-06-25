@@ -18,7 +18,9 @@ https://skip-the-dishes.firebaseapp.com
 * Connect with a firebase authentication
 
 ## I forgot to say...
-* I have who Java Certifications: SCJP and SCWCD
+* I have who Java Certifications: 
+  * SCJP 
+  * SCWCD
 * Some courses done with Udacity.com during the last 12 months
   * React Developer - https://confirm.udacity.com/HPWQRCVK
   * Android Developer - https://confirm.udacity.com/PJQAKSDP
