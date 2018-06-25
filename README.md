@@ -13,8 +13,9 @@ https://skip-the-dishes.firebaseapp.com
 * routers
 * CoreUI - I used http://coreui.io/ as a teamplate to the UI
 
-## to the future...
-* Connect with a graphql api using graphcool service
-* Connect with a firebase project 
+## To the future...
+* Connect with a firebase realtime database
+* Connect with a firebase authentication
+
 
 
