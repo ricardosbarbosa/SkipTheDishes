@@ -20,9 +20,9 @@ https://skip-the-dishes.firebaseapp.com
 ## I forgot to say...
 * I have who Java Certifications: SCJP and SCWCD
 * Some courses done with Udacity.com during the last 12 months
-** React Developer - https://confirm.udacity.com/HPWQRCVK
-** Android Developer - https://confirm.udacity.com/PJQAKSDP
-** IOS Developer - https://confirm.udacity.com/GYZSMDYS
-** Design Sprint - https://confirm.udacity.com/HDXQDRG6
-** Data Science - https://confirm.udacity.com/XEW7LUWY
-** Startup Founder https://confirm.udacity.com/WXLPCAPZ
+  * React Developer - https://confirm.udacity.com/HPWQRCVK
+  * Android Developer - https://confirm.udacity.com/PJQAKSDP
+  * IOS Developer - https://confirm.udacity.com/GYZSMDYS
+  * Design Sprint - https://confirm.udacity.com/HDXQDRG6
+  * Data Science - https://confirm.udacity.com/XEW7LUWY
+  * Startup Founder https://confirm.udacity.com/WXLPCAPZ
