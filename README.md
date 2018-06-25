@@ -1,7 +1,9 @@
 # A new steakholder to Skip the dishes
+https://skip-the-dishes.firebaseapp.com
 
 ## Technologies
 * React
+* Firebase Hosting 
 
 ## Main libraries
 * reactjs :P
