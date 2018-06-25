@@ -20,7 +20,7 @@ export function shoppingList(state = [], action) {
     }
     case RecipesActionTypes.ADD_RECIPE_INGREDIENTS: 
       for (let item of action.ingredients)  
-        state = addOrIncrement(state, { name: item })
+        state = addOrIncrement(state, item)
       return state
     default:
       return state;

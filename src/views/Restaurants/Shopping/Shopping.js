@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Badge, Button, Card, CardBody, CardHeader, Col, Container, Jumbotron, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row } from 'reactstrap';
-import { addIngredient } from '../../../actions/ingredients'
-import { addRecipeIngredients } from '../../../actions/recipes'
+import { addIngredient, loadIngredients } from '../../../actions/ingredients'
+import { addRecipeIngredients, loadRecipes } from '../../../actions/recipes'
+
 class Shopping extends Component {
+
+  componentDidMount() {
+    this.props.loadIngredients()
+    this.props.loadRecipes()
+  }
 
   render() {
     const { recipes, ingredients, shoppingList } = this.props
@@ -17,6 +23,9 @@ class Shopping extends Component {
                 <i className="fa fa-align-justify"></i><strong>Shopping</strong>
               </CardHeader>
               <CardBody>
+                <p>
+                  I create a simple grapql api in graphcool service, the data you see here come from this endpoint: https://api.graph.cool/simple/v1/cjitk5fhc2evf0108j1rbwenf
+                </p>
                 <Row>
                   <Col>
                     <h1>Recipes</h1>
@@ -30,7 +39,7 @@ class Shopping extends Component {
                               <Button color="primary" className="float-right" onClick={() => addRecipeIngredients(r)}>Add</Button>
                             </ListGroupItemHeading>
                             <ListGroupItemText>
-                              {r.ingredients.join(", ")}
+                              {r.ingredients.map(i => i.name).join(", ")}
                             </ListGroupItemText>
                           </ListGroupItem>
                         )
@@ -43,7 +52,7 @@ class Shopping extends Component {
                     <h6>Here you can add one ingredient at time</h6>
                     <ListGroup>
                       {ingredients.map(i => 
-                        <ListGroupItem key={i.name} className="justify-content-between">
+                        <ListGroupItem key={i.id} className="justify-content-between">
                           {i.name} 
                           <Button color="primary" className="float-right" onClick={() => addIngredient(i)}>Add</Button>  
                         </ListGroupItem>
@@ -52,9 +61,10 @@ class Shopping extends Component {
                     </ListGroup>
                   </Col>
                 </Row>
+                
                 <hr />
                 <Row>
-                  <Col>                  
+                  <Col>
                     <Button active block color="primary" aria-pressed="true" onClick={() => this.props.history.push("/restaurants/shopping/cart")}>Process a Order - {shoppingList.length} itens in the cart</Button>
                   </Col>
                 </Row>
@@ -77,6 +87,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   addRecipeIngredients,
   addIngredient,
+  loadIngredients,
+  loadRecipes
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Shopping);

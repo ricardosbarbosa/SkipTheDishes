@@ -1,7 +1,9 @@
-import { ingredients as ingredientsData }  from '../_ingredients'
+import * as IngredientsActionTypes from '../actions/ingredients';
 
-export function ingredients(state = ingredientsData, action) {
+export function ingredients(state = [], action) {
   switch (action.type) {
+    case IngredientsActionTypes.LOAD_INGREDIENTS: 
+      return action.ingredients
     default:
       return state;
   }

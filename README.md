@@ -3,7 +3,8 @@ https://skip-the-dishes.firebaseapp.com
 
 ## Technologies
 * React
-* Firebase Hosting 
+* Firebase Hosting - https://skip-the-dishes.firebaseapp.com
+* GraphQL - https://api.graph.cool/simple/v1/cjitk5fhc2evf0108j1rbwenf
 
 ## Main libraries
 * reactjs :P

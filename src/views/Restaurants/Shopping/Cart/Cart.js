@@ -18,16 +18,15 @@ class ShoppingCart extends Component {
           <Col>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Shopping cart</strong>
+                <i className="fa fa-align-justify " ></i><strong>Shopping cart</strong>
               </CardHeader>
               <CardBody>
                 <Row>
                  <Col>
-                    <h1>Ingredients</h1>
-                    <Button color="warning" onClick={() => changeOrderBy()}>Ordering by: {orderBy}</Button>{' '}
+                    <h1>Ingredients <Button color="warning" className="float-right" onClick={() => changeOrderBy()}>Ordering by: {orderBy}</Button>{' '}</h1>
                     <ListGroup>
                       {shoppingList.map(i => 
-                        <ListGroupItem key={i.name} className="justify-content-between">
+                        <ListGroupItem key={i.id} className="justify-content-between">
                           {i.quantity} - {i.name} 
                           <div className="float-right">
                             <Button color="danger" onClick={() => removeIngredient(i)}>Remove</Button>{' '}
