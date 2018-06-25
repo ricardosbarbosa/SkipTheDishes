@@ -9,6 +9,7 @@ https://skip-the-dishes.firebaseapp.com
 * reactjs :P
 * redux
 * reselect
+* routers
 * CoreUI - I used http://coreui.io/ as a teamplate to the UI
 
 ## to the future...
